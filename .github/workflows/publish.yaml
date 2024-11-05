@@ -26,6 +26,9 @@ jobs:
       - name: Install libgdal
         run: sudo apt-get install libgdal-dev
 
+      - name: Install system dependencies
+        run: sudo apt-get install -y libpoppler-cpp-dev  # Install Poppler library
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 

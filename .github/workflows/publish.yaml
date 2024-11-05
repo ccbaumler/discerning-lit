@@ -14,6 +14,18 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Install libglpk40
+        run: sudo apt-get install libglpk40
+
+      - name: Install libudunits2
+        run: sudo apt-get install libudunits2-dev
+
+      - name: Install libproj
+        run: sudo apt-get install libproj-dev
+
+      - name: Install libgdal
+        run: sudo apt-get install libgdal-dev
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 

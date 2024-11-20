@@ -15,6 +15,7 @@ format:
     menu:
       side: right
       width: half
+    html-math-method: mathjax
 filters:
   - webr
 from: markdown+emoji
@@ -144,9 +145,60 @@ Qualitative requires a reader (a person to spend time reading!)!
   - lengths of words (by characters) and sentences length 
   - character count of words and sentence
 
+## Readability -- ***Quantitatively*** defined by many metrics! 
+
+### Define readability - Statistically
+
+::: {.vscroll}
+
+```{r}
+#| echo: false
+#| eval: true
+# Load the required libraries
+library(kableExtra)
+
+# Define the dataframe with LaTeX formulas (use \\( ... \\) syntax)
+readability_df <- data.frame(
+  Scale = c("Flesch Reading Ease", "Flesch-Kincaid Grade Level", "SMOG Index", "Gunning Fog Index", "Automated Readability Index", "Coleman-Liau Index"),
+  Description = c(
+    "Measures readability ease.",
+    "Adjusts the Flesch formula to reflect U.S. grade levels.",
+    "Estimates reading grade level based on complexity.",
+    "Estimates reading grade level based on complexity.",
+    "Uses word and sentence character counts to estimate the U.S. grade level",
+    "Uses document and sentence length for estimating reading level."
+  ),
+  Score_Range = c("0-100", "0-12+", "Varies", "5-20+", "1-14+", "1-14+"),
+  Interpretation = c(
+    "70-100: Easy, 60-70: Standard (8-9th grade), 0-60: Difficult.",
+    "Score corresponds to the grade level (8.0 = 8th grade).",
+    "< 5 (elementary), 5-9 (middle school), 9-13 (high school), 13-17 (college level).",
+    "Score corresponds to the grade level (8.0 = 8th grade).",
+    "< 5 (elementary), 5-9 (middle school), 9-13 (high school), 13-17 (college level).",
+    "Score corresponds to the grade level (8.0 = 8th grade)."
+  ),
+  Formula = c(
+    "\\(206.835 - (1.015 \\times \\text{ASL}) - (84.6 \\times \\text{ASW})\\)",
+    "\\((0.39 \\times \\text{ASL}) + (11.8 \\times \\text{ASW}) - 15.59\\)",
+    "\\(1.0430 \\times \\sqrt{30 \\times \\text{number of polysyllabic words}} + 3.1291\\)",
+    "\\(0.4 \\times [(\\text{ASL}) + (\\text{percentage of complex words})]\\)",
+    "\\((4.71 \\times \\text{characters/words}) + (0.5 \\times \\text{words/sentences}) - 21.43\\)",
+    "\\((0.0588 \\times L) - (0.296 \\times S) - 15.8\\)"
+  )
+)
+
+# Render the table with kableExtra
+readability_df %>%
+  kable("html", escape = FALSE, align = "c") %>%
+  kable_styling("striped", full_width = F)
+
+```
+
+:::
+
 # Discuss readability in scientific communication
 
-![HighFive for Readability metrics!](images/highfive-readability.jpeg)
+![High Five for Readability metrics!](images/highfive-readability.jpeg)
 
 ## What are uses for readability metrics?
 
@@ -155,9 +207,11 @@ Qualitative requires a reader (a person to spend time reading!)!
 ::: {.notes}
 
 Quantitatively identify expert blindspots in our writing
-Accessibility - equability - communication 
+Accessibility  - equability (allow engagement!) - communication - speed of analysis
 
-Identify target audience for writing, Edit writing for target audience (paper, poster, blog, or lesson!), list the most readable documents for scientific sub-domains (ESL, newly entered, very busy)
+Identify target audience for writing, Edit writing for target audience (paper, poster, blog, or lesson!), list the most readable documents for scientific sub-domains (ESL, newly entered, very busy), Publish easier in better jounrals (https://link.springer.com/article/10.1007/S11192-019-03332-4)
+
+Shifting the focus from a standard student to the non-traditional and minority student
 
 :::
 
@@ -215,7 +269,7 @@ some text
 |----------------|:------------:|:--------------------:|:-----------:|:-----------:|:----------:|:-------------------------:|
 | The lab handout  | 40.25443   | 13.05382           | 16.55517  | 14.6636   | 12.35164 | 11.14093                |
 | The page on PCR  | 31.83886   | 15.029143          | 19.028571 | 16.699557 | 13.839486| 11.440588               |
-| My supp. on PCR  | 56.69536   | 10.17015           | 13.65185  | 12.72743  | 10.27902 | 9.872457                |
+| My supp. on PCR  | 50.89895   | 11.16918           | 14.49945  | 13.38459  | 10.84939 | 10.39321                |
 ---
 
 :::

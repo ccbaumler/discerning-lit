@@ -34,7 +34,7 @@ averages <- pdf_r_df %>%
 # View result
 print(averages)
 
-rev_lab_pdf <- pdf_text("What is PCR - HackMD.pdf")
+rev_lab_pdf <- pdf_text("What is PCR_ - HackMD.pdf")
 rev_lab_pdf_c <- sapply(rev_lab_pdf, function(x) {
   lines <- unlist(strsplit(x, "\n"))
   lines <- trimws(lines)

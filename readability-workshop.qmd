@@ -87,7 +87,7 @@ countdown::countdown(minutes = 1, seconds = 0, warn_when = 15,
 
 ## Readabilty -- ***Qualitative*** ease of reading written material
 
-### Define readability - Plainly written
+### Define readability - Verbally
 
 ::: {layout='[[1,1],[1]]'}
 
@@ -98,7 +98,6 @@ countdown::countdown(minutes = 1, seconds = 0, warn_when = 15,
 - the state or quality of being readable.
 
 - the properties that affect the sustainability of reading material (typography)
-  - Compare legibility
 
 ::::
 
@@ -110,7 +109,6 @@ countdown::countdown(minutes = 1, seconds = 0, warn_when = 15,
   - a: legible (can be read)
   - b: interesting (worth being read)
   - c: suitable (fit to be read)
-    - Example: a highly ***readable*** novel
 
 ::::
 
@@ -118,98 +116,15 @@ countdown::countdown(minutes = 1, seconds = 0, warn_when = 15,
 
 [[![Why did the dancing girl stop to read?](images/photo-of-girl-reading-book.jpg){.lightbox}]{.absolute top=50 right=50 width=100}]{.fragment}
 
-## Readability -- ***Quantitatively*** defined by many metrics! 
-
-### Define readability - Statistically
-
-::: {.notes}
-
-Stop at the end and ask how these definitions match with what they wrote!
-
-Was it more qualitative or quantitative?
-
-What are the strengths of either?
-the rest of the talk will be focused on quantitative 
-Qualitative requires a reader (a person to spend time reading!)!
-
-:::
-
-- Flesch Reading Ease + Flesch-Kincaid Grade Level: 
-  - Word syllables and Sentence length ($\frac{words}{sentence}$)
-
-- [SMOG]{.hovertext data-hover="Simple Measure of Gobbledygook"} + Gunning Fog: 
-  - [Complex vocabulary]{.hovertext data-hover="(3 or more syllables)"} and sentence count
-  - [Complex vocabulary]{.hovertext data-hover="(3 or more syllables)"} and sentence length
-
-- [ARI]{.hovertext data-hover="Automated Readability Index"} + Coleman-Liau Index: 
-  - lengths of words (by characters) and sentences length 
-  - character count of words and sentence
-
-## Readability -- ***Quantitatively*** defined by many metrics! 
-
-### Define readability - Statistically
-
-::: {.vscroll}
-
-```{r}
-#| echo: false
-#| eval: true
-# Load the required libraries
-library(kableExtra)
-
-# Define the dataframe with LaTeX formulas (use \\( ... \\) syntax)
-readability_df <- data.frame(
-  Scale = c("Flesch Reading Ease", "Flesch-Kincaid Grade Level", "SMOG Index", "Gunning Fog Index", "Automated Readability Index", "Coleman-Liau Index"),
-  Description = c(
-    "Measures readability ease.",
-    "Adjusts the Flesch formula to reflect U.S. grade levels.",
-    "Estimates reading grade level based on complexity.",
-    "Estimates reading grade level based on complexity.",
-    "Uses word and sentence character counts to estimate the U.S. grade level",
-    "Uses document and sentence length for estimating reading level."
-  ),
-  Score_Range = c("0-100", "0-12+", "Varies", "5-20+", "1-14+", "1-14+"),
-  Interpretation = c(
-    "70-100: Easy, 60-70: Standard (8-9th grade), 0-60: Difficult.",
-    "Score corresponds to the grade level (8.0 = 8th grade).",
-    "< 5 (elementary), 5-9 (middle school), 9-13 (high school), 13-17 (college level).",
-    "Score corresponds to the grade level (8.0 = 8th grade).",
-    "< 5 (elementary), 5-9 (middle school), 9-13 (high school), 13-17 (college level).",
-    "Score corresponds to the grade level (8.0 = 8th grade)."
-  ),
-  Formula = c(
-    "\\(206.835 - (1.015 \\times \\text{ASL}) - (84.6 \\times \\text{ASW})\\)",
-    "\\((0.39 \\times \\text{ASL}) + (11.8 \\times \\text{ASW}) - 15.59\\)",
-    "\\(1.0430 \\times \\sqrt{30 \\times \\text{number of polysyllabic words}} + 3.1291\\)",
-    "\\(0.4 \\times [(\\text{ASL}) + (\\text{percentage of complex words})]\\)",
-    "\\((4.71 \\times \\text{characters/words}) + (0.5 \\times \\text{words/sentences}) - 21.43\\)",
-    "\\((0.0588 \\times L) - (0.296 \\times S) - 15.8\\)"
-  )
-)
-
-# Render the table with kableExtra
-readability_df %>%
-  kable("html", escape = FALSE, align = "c") %>%
-  kable_styling("striped", full_width = F)
-
-```
-
-:::
-
-# Discuss readability in scientific communication
-
-![High Five for Readability metrics!](images/highfive-readability.jpeg)
-
-## What are uses for readability metrics?
+## What is important about readability?
 
 ### Discuss readability in scientific communication
 
 ::: {.notes}
 
-Quantitatively identify expert blindspots in our writing
-Accessibility  - equability (allow engagement!) - communication - speed of analysis
+Accessibility  - equitability (allow engagement!) - communication
 
-Identify target audience for writing, Edit writing for target audience (paper, poster, blog, or lesson!), list the most readable documents for scientific sub-domains (ESL, newly entered, very busy), Publish easier in better jounrals (https://link.springer.com/article/10.1007/S11192-019-03332-4)
+helping readers understand and use our writings! ~~out of reach concepts~~
 
 Shifting the focus from a standard student to the non-traditional and minority student
 
@@ -221,7 +136,7 @@ Shifting the focus from a standard student to the non-traditional and minority s
 
 <br></br>
 
-[***What are some reasons why readability is important in Science Communication?***]{style="font-size: 1.25em;" .fragment}
+[***Why is readability important in Science Communication?***]{style="font-size: 1.25em;" .fragment}
 
 ::::
 
@@ -257,19 +172,203 @@ document.getElementById("userInput").addEventListener("input", function() {
 
 :::
 
+
+## Readability -- ***Quantitatively*** defined by many metrics! 
+
+### Define readability - Statistically
+
+::: {.notes}
+
+- speed of analysis!!! No one needs to read this unlike qualitative
+
+Stop at the end and ask how these definitions match with what they wrote!
+
+Was it more qualitative or quantitative?
+
+What are the strengths of either?
+the rest of the talk will be focused on quantitative 
+Qualitative requires a reader (a person to spend time reading!)!
+
+:::
+
+
+::: {.vscroll}
+
+:::: {.smaller}
+
+```{r}
+#| echo: false
+#| eval: true
+# Load the required libraries
+library(kableExtra)
+
+# Define the dataframe with LaTeX formulas (use \\( ... \\) syntax)
+readability_df <- data.frame(
+  Scale = c("Flesch Reading Ease", "Flesch-Kincaid Grade Level", "SMOG Index", "Gunning Fog Index", "Automated Readability Index", "Coleman-Liau Index"),
+  Description = c(
+    "Measures readability ease.",
+    "Adjusts the Flesch formula to reflect U.S. grade levels.",
+    "Estimates reading grade level based on complexity.",
+    "Estimates reading grade level based on complexity.",
+    "Uses word and sentence character counts to estimate the U.S. grade level",
+    "Uses document and sentence length for estimating reading level."
+  ),
+  Score_Range = c("0-100", "0-12+", "0-20+", "5-20+", "1-14+", "1-14+"),
+  Interpretation = c(
+    "70-100: Easy, 60-70: Standard (8-9th grade), 0-60: Difficult.",
+    "Score corresponds to the grade level (8.0 = 8th grade).",
+    "< 5 (elementary), 5-9 (middle school), 9-13 (high school), 13-17 (college level).",
+    "Score corresponds to the grade level (8.0 = 8th grade).",
+    "< 5 (elementary), 5-9 (middle school), 9-13 (high school), 13-17 (college level).",
+    "Score corresponds to the grade level (8.0 = 8th grade)."
+  ),
+  Formula = c(
+    "\\(206.835 - (1.015 \\times \\text{total words/total sentences}) - (84.6 \\times \\text{total syllables/total words})\\)",
+    "\\((0.39 \\times \\text{ASL}) + (11.8 \\times \\text{ASW}) - 15.59\\)",
+    "\\(1.0430 \\times \\sqrt{30 \\times \\text{number of polysyllabic words}} + 3.1291\\)",
+    "\\(0.4 \\times [(\\text{ASL}) + (\\text{percentage of complex words})]\\)",
+    "\\((4.71 \\times \\text{characters/words}) + (0.5 \\times \\text{words/sentences}) - 21.43\\)",
+    "\\((0.0588 \\times L) - (0.296 \\times S) - 15.8\\)"
+  )
+)
+
+# Render the table with kableExtra
+readability_df %>%
+  kable("html", escape = FALSE, align = "c") %>%
+  kable_styling("striped", full_width = F)
+
+```
+
+::::
+
+:::
+
+## Plotting the metrics displays their scope
+
+### Define readability - Statistically
+
+::: {.r-stack}
+![](images/flesch_reading_ease_plot.png)
+
+![](images/flesch_kincaid_plot.png){.fragment}
+
+![](images/smog_plot.png){.fragment}
+
+![](images/gunning_fog_plot.png){.fragment}
+
+![](images/ari_plot.png){.fragment}
+
+![](images/coleman_liau_plot.png){.fragment}
+:::
+
+
+# Discuss readability in scientific communication
+
+![High Five for Readability metrics!](images/highfive-readability.jpeg)
+
+## What are applications of readability?
+
+### Discuss readability in scientific communication
+
+::: {.notes}
+
+Accessibility - id and remove expert blindspots in our writing
+Allow engagement at all levels - equitability (allow engagement!)
+Communication - helping readers understand and use our writings!
+
+Identify target audience for writing, Edit writing for target audience (paper, poster, blog, or lesson!), list the most readable documents for scientific sub-domains (ESL, newly entered, very busy), Publish easier in better journals (https://link.springer.com/article/10.1007/S11192-019-03332-4)
+
+Shifting the focus from a standard student to the non-traditional and minority student
+
+:::
+
+::: {.columns}
+
+:::: {.column width="50%"}
+
+<br></br>
+
+[***How can readability be applied to Science Communication?***]{style="font-size: 1.25em;" .fragment}
+
+::::
+
+:::: {.column width="50%"}
+
+```{ojs}
+//| echo: false
+//| output: false
+function updateOutputText2() {
+  // Get the content of outputText
+  let existingOutput = document.getElementById("outputText").innerHTML;
+
+  // Get the current value of userInput2
+  let userInput2 = document.getElementById("userInput2").value;
+  let words = userInput2.split("-");
+
+  // Create a list from userInput2
+  let newOutput = "";
+  words.forEach(word => {
+    newOutput += `<li>${word}</li>`;
+  });
+
+  // Combine existing outputText content with userInput2 output
+  document.getElementById("outputText2").innerHTML = `<ul>${existingOutput}${newOutput}</ul>`;
+}
+
+// Update outputText2 whenever userInput changes
+document.getElementById("userInput").addEventListener("input", function () {
+  let userInput = this.value;
+  let words = userInput.split("-");
+  let output = "";
+
+  words.forEach(word => {
+    output += `<li>${word}</li>`;
+  });
+
+  // Update outputText
+  document.getElementById("outputText").innerHTML = `<ul>${output}</ul>`;
+
+  // Update outputText2 immediately
+  updateOutputText2();
+});
+
+// Update outputText2 whenever userInput2 changes
+document.getElementById("userInput2").addEventListener("input", updateOutputText2);
+
+```
+
+::::: interactive-textbox
+
+:::::: {.vscroll}
+
+<input type="text" id="userInput2" placeholder="Type some ideas...">
+
+<p id="outputText2">
+
+</p>
+
+::::::
+
+:::::
+
+::::
+
+:::
+
 ## Am I improving the documentation?
 
 ### Discuss readability in scientific communication
 
-some text
+[MCB 180L contains material not suited for its student audience. Readability allowed a quantifiable solution.]{.fragment}
 
 ::: {.smaller}
 
-| Document    | avg_Flesch | avg_Flesch.Kincaid | avg_FOG   | avg_SMOG  | avg_ARI  | avg_Coleman.Liau.grade |
-|----------------|:------------:|:--------------------:|:-----------:|:-----------:|:----------:|:-------------------------:|
-| The lab handout  | 40.25443   | 13.05382           | 16.55517  | 14.6636   | 12.35164 | 11.14093                |
-| The page on PCR  | 31.83886   | 15.029143          | 19.028571 | 16.699557 | 13.839486| 11.440588               |
-| My supp. on PCR  | 50.89895   | 11.16918           | 14.49945  | 13.38459  | 10.84939 | 10.39321                |
+| Document               | avg_Flesch | avg_Flesch.Kincaid | avg_FOG | avg_SMOG | avg_ARI | avg_Coleman.Liau.grade | Overall_avg |
+|------------------------|------------|--------------------|---------|----------|---------|-------------------------|-------------|
+| Lab's handout          | 40         | 13                 | 17      | 15       | 12      | 11                      | 14          |
+| Lab's PCR page         | 32         | 15                 | 19      | 17       | 14      | 11                      | 15          |
+| My revised PCR page    | 51         | 11                 | 14      | 13       | 11      | 10                      | 12          |
+: {.fragment}
 ---
 
 :::
@@ -364,6 +463,38 @@ gt::gt(dmv_averages)
 # Acknowledgments
 
 You
+
+# Supp
+
+## Readability -- ***Quantitatively*** defined by many metrics! 
+
+### Define readability - Statistically
+
+::: {.notes}
+
+- speed of analysis!!! No one needs to read this unlike qualitative
+
+Stop at the end and ask how these definitions match with what they wrote!
+
+Was it more qualitative or quantitative?
+
+What are the strengths of either?
+the rest of the talk will be focused on quantitative 
+Qualitative requires a reader (a person to spend time reading!)!
+
+:::
+
+- Flesch Reading Ease + Flesch-Kincaid Grade Level: 
+  - Word syllables and Sentence length ($\frac{words}{sentence}$)
+
+- [SMOG]{.hovertext data-hover="Simple Measure of Gobbledygook"} + Gunning Fog: 
+  - [Complex vocabulary]{.hovertext data-hover="(3 or more syllables)"} and sentence count
+  - [Complex vocabulary]{.hovertext data-hover="(3 or more syllables)"} and sentence length
+
+- [ARI]{.hovertext data-hover="Automated Readability Index"} + Coleman-Liau Index: 
+  - lengths of words (by characters) and sentences length 
+  - character count of words and sentence
+
 
 
 ```{css, echo=FALSE}

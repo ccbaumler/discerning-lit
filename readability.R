@@ -29,10 +29,22 @@ pdf_r_df <- pdf_r_df %>%
   slice(-(85:86))
 
 averages <- pdf_r_df %>%
-  summarise(across(c("Flesch", "Flesch.Kincaid", "FOG", "SMOG", "ARI", "Coleman.Liau.grade"), mean, .names = "avg_{.col}"))
+  summarise(across(c("Flesch", "Flesch.Kincaid", "FOG", "SMOG", "ARI", "Coleman.Liau.grade"), mean, .names = "avg_{.col}")) %>%
+  mutate(Overall_avg = rowMeans(across(avg_Flesch.Kincaid:avg_Coleman.Liau.grade)))
 
 # View result
 print(averages)
+
+round_df <- function(x, digits) {
+  # round all numeric variables
+  # x: data frame 
+  # digits: number of digits to round
+  numeric_columns <- sapply(x, mode) == 'numeric'
+  x[numeric_columns] <-  round(x[numeric_columns], digits)
+  x
+}
+
+round_ave <- round_df(averages)
 
 rev_lab_pdf <- pdf_text("What is PCR_ - HackMD.pdf")
 rev_lab_pdf_c <- sapply(rev_lab_pdf, function(x) {
@@ -43,8 +55,10 @@ rev_lab_pdf_c <- sapply(rev_lab_pdf, function(x) {
 })
 
 rev_lab_df <- textstat_readability(rev_lab_pdf_c, measure = c("Flesch", "Flesch.Kincaid", "FOG", "SMOG", "ARI", "Coleman.Liau.grade"))
+
 rev_lab_averages <- rev_lab_df %>%
-  summarise(across(c("Flesch", "Flesch.Kincaid", "FOG", "SMOG", "ARI", "Coleman.Liau.grade"), mean, .names = "avg_{.col}"))
+  summarise(across(c("Flesch", "Flesch.Kincaid", "FOG", "SMOG", "ARI", "Coleman.Liau.grade"), mean, .names = "avg_{.col}")) %>%
+  mutate(Overall_avg = rowMeans(across(avg_Flesch.Kincaid:avg_Coleman.Liau.grade)))
 
 text <- "Sample text for readability analysis."
 textstat_readability(text, measure = c("Flesch", "Flesch.Kincaid", "FOG", "SMOG", "Dale.Chall.old"))

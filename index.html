@@ -438,12 +438,12 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 <h2>Plotting the metrics displays their scope</h2>
 <h3 id="define-readability---statistically-1">Define readability - Statistically</h3>
 <div class="r-stack">
-<p><img data-src="images/flesch_reading_ease_plot.png"></p>
-<p><img data-src="images/flesch_kincaid_plot.png" class="fragment"></p>
-<p><img data-src="images/smog_plot.png" class="fragment"></p>
-<p><img data-src="images/gunning_fog_plot.png" class="fragment"></p>
-<p><img data-src="images/ari_plot.png" class="fragment"></p>
-<p><img data-src="images/coleman_liau_plot.png" class="fragment"></p>
+<p><img data-src="images/flesch_reading_ease_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></p>
+<p><span class="fragment"><img data-src="images/flesch_kincaid_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
+<p><span class="fragment"><img data-src="images/smog_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
+<p><span class="fragment"><img data-src="images/gunning_fog_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
+<p><span class="fragment"><img data-src="images/ari_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
+<p><span class="fragment">![](images/coleman_liau_plot.png{.absolute bottom=0 right=250 height=“500px”}</span></p>
 </div>
 </section></section>
 <section>
@@ -475,40 +475,40 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 <p><span class="fragment" style="font-size: 1.25em;"><strong><em>How can readability be applied to Science Communication?</em></strong></span></p>
 </div><div class="column" style="width:50%;">
 <div class="cell hidden">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="300" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 299;"><span id="cb2-300"><a href=""></a><span class="kw">function</span> <span class="fu">updateOutputText2</span>() {</span>
-<span id="cb2-301"><a href=""></a>  <span class="co">// Get the content of outputText</span></span>
-<span id="cb2-302"><a href=""></a>  <span class="kw">let</span> existingOutput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span><span class="op">;</span></span>
-<span id="cb2-303"><a href=""></a></span>
-<span id="cb2-304"><a href=""></a>  <span class="co">// Get the current value of userInput2</span></span>
-<span id="cb2-305"><a href=""></a>  <span class="kw">let</span> userInput2 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
-<span id="cb2-306"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput2<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
-<span id="cb2-307"><a href=""></a></span>
-<span id="cb2-308"><a href=""></a>  <span class="co">// Create a list from userInput2</span></span>
-<span id="cb2-309"><a href=""></a>  <span class="kw">let</span> newOutput <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb2-310"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
-<span id="cb2-311"><a href=""></a>    newOutput <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
-<span id="cb2-312"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb2-313"><a href=""></a></span>
-<span id="cb2-314"><a href=""></a>  <span class="co">// Combine existing outputText content with userInput2 output</span></span>
-<span id="cb2-315"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText2"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>existingOutput<span class="sc">}${</span>newOutput<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
-<span id="cb2-316"><a href=""></a>}</span>
-<span id="cb2-317"><a href=""></a></span>
-<span id="cb2-318"><a href=""></a><span class="co">// Update outputText2 whenever userInput changes</span></span>
-<span id="cb2-319"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> <span class="kw">function</span> () {</span>
-<span id="cb2-320"><a href=""></a>  <span class="kw">let</span> userInput <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
-<span id="cb2-321"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
-<span id="cb2-322"><a href=""></a>  <span class="kw">let</span> output <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb2-323"><a href=""></a></span>
-<span id="cb2-324"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
-<span id="cb2-325"><a href=""></a>    output <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
-<span id="cb2-326"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb2-327"><a href=""></a></span>
-<span id="cb2-328"><a href=""></a>  <span class="co">// Update outputText</span></span>
-<span id="cb2-329"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>output<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
-<span id="cb2-330"><a href=""></a></span>
-<span id="cb2-331"><a href=""></a>  <span class="co">// Update outputText2 immediately</span></span>
-<span id="cb2-332"><a href=""></a>  <span class="fu">updateOutputText2</span>()<span class="op">;</span></span>
-<span id="cb2-333"><a href=""></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="301" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 300;"><span id="cb2-301"><a href=""></a><span class="kw">function</span> <span class="fu">updateOutputText2</span>() {</span>
+<span id="cb2-302"><a href=""></a>  <span class="co">// Get the content of outputText</span></span>
+<span id="cb2-303"><a href=""></a>  <span class="kw">let</span> existingOutput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span><span class="op">;</span></span>
+<span id="cb2-304"><a href=""></a></span>
+<span id="cb2-305"><a href=""></a>  <span class="co">// Get the current value of userInput2</span></span>
+<span id="cb2-306"><a href=""></a>  <span class="kw">let</span> userInput2 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb2-307"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput2<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
+<span id="cb2-308"><a href=""></a></span>
+<span id="cb2-309"><a href=""></a>  <span class="co">// Create a list from userInput2</span></span>
+<span id="cb2-310"><a href=""></a>  <span class="kw">let</span> newOutput <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb2-311"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
+<span id="cb2-312"><a href=""></a>    newOutput <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
+<span id="cb2-313"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb2-314"><a href=""></a></span>
+<span id="cb2-315"><a href=""></a>  <span class="co">// Combine existing outputText content with userInput2 output</span></span>
+<span id="cb2-316"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText2"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>existingOutput<span class="sc">}${</span>newOutput<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
+<span id="cb2-317"><a href=""></a>}</span>
+<span id="cb2-318"><a href=""></a></span>
+<span id="cb2-319"><a href=""></a><span class="co">// Update outputText2 whenever userInput changes</span></span>
+<span id="cb2-320"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb2-321"><a href=""></a>  <span class="kw">let</span> userInput <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb2-322"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
+<span id="cb2-323"><a href=""></a>  <span class="kw">let</span> output <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb2-324"><a href=""></a></span>
+<span id="cb2-325"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
+<span id="cb2-326"><a href=""></a>    output <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
+<span id="cb2-327"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb2-328"><a href=""></a></span>
+<span id="cb2-329"><a href=""></a>  <span class="co">// Update outputText</span></span>
+<span id="cb2-330"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>output<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
+<span id="cb2-331"><a href=""></a></span>
+<span id="cb2-332"><a href=""></a>  <span class="co">// Update outputText2 immediately</span></span>
+<span id="cb2-333"><a href=""></a>  <span class="fu">updateOutputText2</span>()<span class="op">;</span></span>
+<span id="cb2-334"><a href=""></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -523,7 +523,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="336" data-source-offset="-1062"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 335;"><span id="cb3-336"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> updateOutputText2)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="337" data-source-offset="-1062"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 336;"><span id="cb3-337"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> updateOutputText2)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div>
 <div id="ojs-cell-2-3" data-nodetype="expression">
@@ -676,23 +676,23 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>gt<span class="sc">::</span><span class="fu">gt</span>(dmv_averages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="qxbxqlrzpt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qxbxqlrzpt table {
+<div id="rcyirhmnan" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#rcyirhmnan table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qxbxqlrzpt thead, #qxbxqlrzpt tbody, #qxbxqlrzpt tfoot, #qxbxqlrzpt tr, #qxbxqlrzpt td, #qxbxqlrzpt th {
+#rcyirhmnan thead, #rcyirhmnan tbody, #rcyirhmnan tfoot, #rcyirhmnan tr, #rcyirhmnan td, #rcyirhmnan th {
   border-style: none;
 }
 
-#qxbxqlrzpt p {
+#rcyirhmnan p {
   margin: 0;
   padding: 0;
 }
 
-#qxbxqlrzpt .gt_table {
+#rcyirhmnan .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -718,12 +718,12 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-left-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_caption {
+#rcyirhmnan .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qxbxqlrzpt .gt_title {
+#rcyirhmnan .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -735,7 +735,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-width: 0;
 }
 
-#qxbxqlrzpt .gt_subtitle {
+#rcyirhmnan .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -747,7 +747,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-top-width: 0;
 }
 
-#qxbxqlrzpt .gt_heading {
+#rcyirhmnan .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -759,13 +759,13 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_bottom_border {
+#rcyirhmnan .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_col_headings {
+#rcyirhmnan .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -780,7 +780,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_col_heading {
+#rcyirhmnan .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -800,7 +800,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   overflow-x: hidden;
 }
 
-#qxbxqlrzpt .gt_column_spanner_outer {
+#rcyirhmnan .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -812,15 +812,15 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 4px;
 }
 
-#qxbxqlrzpt .gt_column_spanner_outer:first-child {
+#rcyirhmnan .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qxbxqlrzpt .gt_column_spanner_outer:last-child {
+#rcyirhmnan .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qxbxqlrzpt .gt_column_spanner {
+#rcyirhmnan .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -832,11 +832,11 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   width: 100%;
 }
 
-#qxbxqlrzpt .gt_spanner_row {
+#rcyirhmnan .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qxbxqlrzpt .gt_group_heading {
+#rcyirhmnan .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -862,7 +862,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   text-align: left;
 }
 
-#qxbxqlrzpt .gt_empty_group_heading {
+#rcyirhmnan .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -877,15 +877,15 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   vertical-align: middle;
 }
 
-#qxbxqlrzpt .gt_from_md > :first-child {
+#rcyirhmnan .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qxbxqlrzpt .gt_from_md > :last-child {
+#rcyirhmnan .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qxbxqlrzpt .gt_row {
+#rcyirhmnan .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -904,7 +904,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   overflow-x: hidden;
 }
 
-#qxbxqlrzpt .gt_stub {
+#rcyirhmnan .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -917,7 +917,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#qxbxqlrzpt .gt_stub_row_group {
+#rcyirhmnan .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -931,15 +931,15 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   vertical-align: top;
 }
 
-#qxbxqlrzpt .gt_row_group_first td {
+#rcyirhmnan .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qxbxqlrzpt .gt_row_group_first th {
+#rcyirhmnan .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qxbxqlrzpt .gt_summary_row {
+#rcyirhmnan .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -949,16 +949,16 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#qxbxqlrzpt .gt_first_summary_row {
+#rcyirhmnan .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_first_summary_row.thick {
+#rcyirhmnan .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qxbxqlrzpt .gt_last_summary_row {
+#rcyirhmnan .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -968,7 +968,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_grand_summary_row {
+#rcyirhmnan .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -978,7 +978,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#qxbxqlrzpt .gt_first_grand_summary_row {
+#rcyirhmnan .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -988,7 +988,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-top-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_last_grand_summary_row_top {
+#rcyirhmnan .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -998,11 +998,11 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_striped {
+#rcyirhmnan .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qxbxqlrzpt .gt_table_body {
+#rcyirhmnan .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1011,7 +1011,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_footnotes {
+#rcyirhmnan .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1025,7 +1025,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_footnote {
+#rcyirhmnan .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1034,7 +1034,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#qxbxqlrzpt .gt_sourcenotes {
+#rcyirhmnan .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1048,7 +1048,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#qxbxqlrzpt .gt_sourcenote {
+#rcyirhmnan .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1056,72 +1056,72 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#qxbxqlrzpt .gt_left {
+#rcyirhmnan .gt_left {
   text-align: left;
 }
 
-#qxbxqlrzpt .gt_center {
+#rcyirhmnan .gt_center {
   text-align: center;
 }
 
-#qxbxqlrzpt .gt_right {
+#rcyirhmnan .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qxbxqlrzpt .gt_font_normal {
+#rcyirhmnan .gt_font_normal {
   font-weight: normal;
 }
 
-#qxbxqlrzpt .gt_font_bold {
+#rcyirhmnan .gt_font_bold {
   font-weight: bold;
 }
 
-#qxbxqlrzpt .gt_font_italic {
+#rcyirhmnan .gt_font_italic {
   font-style: italic;
 }
 
-#qxbxqlrzpt .gt_super {
+#rcyirhmnan .gt_super {
   font-size: 65%;
 }
 
-#qxbxqlrzpt .gt_footnote_marks {
+#rcyirhmnan .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qxbxqlrzpt .gt_asterisk {
+#rcyirhmnan .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qxbxqlrzpt .gt_indent_1 {
+#rcyirhmnan .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qxbxqlrzpt .gt_indent_2 {
+#rcyirhmnan .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qxbxqlrzpt .gt_indent_3 {
+#rcyirhmnan .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qxbxqlrzpt .gt_indent_4 {
+#rcyirhmnan .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qxbxqlrzpt .gt_indent_5 {
+#rcyirhmnan .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qxbxqlrzpt .katex-display {
+#rcyirhmnan .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qxbxqlrzpt div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#rcyirhmnan div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

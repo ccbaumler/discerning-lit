@@ -248,17 +248,18 @@ readability_df %>%
 ### Define readability - Statistically
 
 ::: {.r-stack}
-![](images/flesch_reading_ease_plot.png)
 
-![](images/flesch_kincaid_plot.png){.fragment}
+![](images/flesch_reading_ease_plot.png){.absolute bottom=0 right=250 height="500px"}
 
-![](images/smog_plot.png){.fragment}
+[![](images/flesch_kincaid_plot.png){.absolute bottom=0 right=250 height="500px"}]{.fragment}
 
-![](images/gunning_fog_plot.png){.fragment}
+[![](images/smog_plot.png){.absolute bottom=0 right=250 height="500px"}]{.fragment}
 
-![](images/ari_plot.png){.fragment}
+[![](images/gunning_fog_plot.png){.absolute bottom=0 right=250 height="500px"}]{.fragment}
 
-![](images/coleman_liau_plot.png){.fragment}
+[![](images/ari_plot.png){.absolute bottom=0 right=250 height="500px"}]{.fragment}
+
+[![](images/coleman_liau_plot.png{.absolute bottom=0 right=250 height="500px"}]{.fragment}
 :::
 
 

@@ -443,17 +443,12 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 <p><span class="fragment"><img data-src="images/smog_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
 <p><span class="fragment"><img data-src="images/gunning_fog_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
 <p><span class="fragment"><img data-src="images/ari_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
-<p><span class="fragment">![](images/coleman_liau_plot.png{.absolute bottom=0 right=250 height=“500px”}</span></p>
+<p><span class="fragment"><img data-src="images/coleman_liau_plot.png" class="absolute" style="bottom: 0px; right: 250px; height: 500px; "></span></p>
 </div>
-</section></section>
-<section>
-<section id="discuss-readability-in-scientific-communication-1" class="title-slide slide level1 center">
-<h1>Discuss readability in scientific communication</h1>
-
-<img data-src="images/highfive-readability.jpeg" class="r-stretch quarto-figure-center"><p class="caption">High Five for Readability metrics!</p></section>
+</section>
 <section id="what-are-applications-of-readability" class="slide level2">
 <h2>What are applications of readability?</h2>
-<h3 id="discuss-readability-in-scientific-communication-2">Discuss readability in scientific communication</h3>
+<h3 id="discuss-readability-in-scientific-communication-1">Discuss readability in scientific communication</h3>
 <aside class="notes">
 <p>Accessibility - id and remove expert blindspots in our writing Allow engagement at all levels - equitability (allow engagement!) Communication - helping readers understand and use our writings!</p>
 <p>Identify target audience for writing, Edit writing for target audience (paper, poster, blog, or lesson!), list the most readable documents for scientific sub-domains (ESL, newly entered, very busy), Publish easier in better journals (https://link.springer.com/article/10.1007/S11192-019-03332-4)</p>
@@ -475,40 +470,40 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 <p><span class="fragment" style="font-size: 1.25em;"><strong><em>How can readability be applied to Science Communication?</em></strong></span></p>
 </div><div class="column" style="width:50%;">
 <div class="cell hidden">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="301" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 300;"><span id="cb2-301"><a href=""></a><span class="kw">function</span> <span class="fu">updateOutputText2</span>() {</span>
-<span id="cb2-302"><a href=""></a>  <span class="co">// Get the content of outputText</span></span>
-<span id="cb2-303"><a href=""></a>  <span class="kw">let</span> existingOutput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span><span class="op">;</span></span>
-<span id="cb2-304"><a href=""></a></span>
-<span id="cb2-305"><a href=""></a>  <span class="co">// Get the current value of userInput2</span></span>
-<span id="cb2-306"><a href=""></a>  <span class="kw">let</span> userInput2 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
-<span id="cb2-307"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput2<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
-<span id="cb2-308"><a href=""></a></span>
-<span id="cb2-309"><a href=""></a>  <span class="co">// Create a list from userInput2</span></span>
-<span id="cb2-310"><a href=""></a>  <span class="kw">let</span> newOutput <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb2-311"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
-<span id="cb2-312"><a href=""></a>    newOutput <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
-<span id="cb2-313"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb2-314"><a href=""></a></span>
-<span id="cb2-315"><a href=""></a>  <span class="co">// Combine existing outputText content with userInput2 output</span></span>
-<span id="cb2-316"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText2"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>existingOutput<span class="sc">}${</span>newOutput<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
-<span id="cb2-317"><a href=""></a>}</span>
-<span id="cb2-318"><a href=""></a></span>
-<span id="cb2-319"><a href=""></a><span class="co">// Update outputText2 whenever userInput changes</span></span>
-<span id="cb2-320"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> <span class="kw">function</span> () {</span>
-<span id="cb2-321"><a href=""></a>  <span class="kw">let</span> userInput <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
-<span id="cb2-322"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
-<span id="cb2-323"><a href=""></a>  <span class="kw">let</span> output <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
-<span id="cb2-324"><a href=""></a></span>
-<span id="cb2-325"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
-<span id="cb2-326"><a href=""></a>    output <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
-<span id="cb2-327"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb2-328"><a href=""></a></span>
-<span id="cb2-329"><a href=""></a>  <span class="co">// Update outputText</span></span>
-<span id="cb2-330"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>output<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
-<span id="cb2-331"><a href=""></a></span>
-<span id="cb2-332"><a href=""></a>  <span class="co">// Update outputText2 immediately</span></span>
-<span id="cb2-333"><a href=""></a>  <span class="fu">updateOutputText2</span>()<span class="op">;</span></span>
-<span id="cb2-334"><a href=""></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="296" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 295;"><span id="cb2-296"><a href=""></a><span class="kw">function</span> <span class="fu">updateOutputText2</span>() {</span>
+<span id="cb2-297"><a href=""></a>  <span class="co">// Get the content of outputText</span></span>
+<span id="cb2-298"><a href=""></a>  <span class="kw">let</span> existingOutput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span><span class="op">;</span></span>
+<span id="cb2-299"><a href=""></a></span>
+<span id="cb2-300"><a href=""></a>  <span class="co">// Get the current value of userInput2</span></span>
+<span id="cb2-301"><a href=""></a>  <span class="kw">let</span> userInput2 <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb2-302"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput2<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
+<span id="cb2-303"><a href=""></a></span>
+<span id="cb2-304"><a href=""></a>  <span class="co">// Create a list from userInput2</span></span>
+<span id="cb2-305"><a href=""></a>  <span class="kw">let</span> newOutput <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb2-306"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
+<span id="cb2-307"><a href=""></a>    newOutput <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
+<span id="cb2-308"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb2-309"><a href=""></a></span>
+<span id="cb2-310"><a href=""></a>  <span class="co">// Combine existing outputText content with userInput2 output</span></span>
+<span id="cb2-311"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText2"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>existingOutput<span class="sc">}${</span>newOutput<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
+<span id="cb2-312"><a href=""></a>}</span>
+<span id="cb2-313"><a href=""></a></span>
+<span id="cb2-314"><a href=""></a><span class="co">// Update outputText2 whenever userInput changes</span></span>
+<span id="cb2-315"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb2-316"><a href=""></a>  <span class="kw">let</span> userInput <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb2-317"><a href=""></a>  <span class="kw">let</span> words <span class="op">=</span> userInput<span class="op">.</span><span class="fu">split</span>(<span class="st">"-"</span>)<span class="op">;</span></span>
+<span id="cb2-318"><a href=""></a>  <span class="kw">let</span> output <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb2-319"><a href=""></a></span>
+<span id="cb2-320"><a href=""></a>  words<span class="op">.</span><span class="fu">forEach</span>(word <span class="kw">=&gt;</span> {</span>
+<span id="cb2-321"><a href=""></a>    output <span class="op">+=</span> <span class="vs">`&lt;li&gt;</span><span class="sc">${</span>word<span class="sc">}</span><span class="vs">&lt;/li&gt;`</span><span class="op">;</span></span>
+<span id="cb2-322"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb2-323"><a href=""></a></span>
+<span id="cb2-324"><a href=""></a>  <span class="co">// Update outputText</span></span>
+<span id="cb2-325"><a href=""></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"outputText"</span>)<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`&lt;ul&gt;</span><span class="sc">${</span>output<span class="sc">}</span><span class="vs">&lt;/ul&gt;`</span><span class="op">;</span></span>
+<span id="cb2-326"><a href=""></a></span>
+<span id="cb2-327"><a href=""></a>  <span class="co">// Update outputText2 immediately</span></span>
+<span id="cb2-328"><a href=""></a>  <span class="fu">updateOutputText2</span>()<span class="op">;</span></span>
+<span id="cb2-329"><a href=""></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -523,7 +518,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="337" data-source-offset="-1062"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 336;"><span id="cb3-337"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> updateOutputText2)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="332" data-source-offset="-1062"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 331;"><span id="cb3-332"><a href=""></a><span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"userInput2"</span>)<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">"input"</span><span class="op">,</span> updateOutputText2)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div>
 <div id="ojs-cell-2-3" data-nodetype="expression">
@@ -540,10 +535,15 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 </div>
 </div>
 </div></div>
-</section>
+</section></section>
+<section>
+<section id="applying-metrics-to-academic-handouts" class="title-slide slide level1 center">
+<h1>Applying metrics to academic handouts?</h1>
+
+<img data-src="images/highfive-readability.jpeg" class="r-stretch quarto-figure-center"><p class="caption">High Five for Readability metrics!</p></section>
 <section id="am-i-improving-the-documentation" class="slide level2">
 <h2>Am I improving the documentation?</h2>
-<h3 id="discuss-readability-in-scientific-communication-3">Discuss readability in scientific communication</h3>
+<h3 id="discuss-readability-in-scientific-communication-2">Discuss readability in scientific communication</h3>
 <p><span class="fragment">MCB 180L contains material not suited for its student audience. Readability allowed a quantifiable solution.</span></p>
 <div class="smaller">
 <table class="fragment caption-top" style="width:100%;">
@@ -676,23 +676,23 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a>gt<span class="sc">::</span><span class="fu">gt</span>(dmv_averages)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="rcyirhmnan" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rcyirhmnan table {
+<div id="ogwtzcmpsi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ogwtzcmpsi table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rcyirhmnan thead, #rcyirhmnan tbody, #rcyirhmnan tfoot, #rcyirhmnan tr, #rcyirhmnan td, #rcyirhmnan th {
+#ogwtzcmpsi thead, #ogwtzcmpsi tbody, #ogwtzcmpsi tfoot, #ogwtzcmpsi tr, #ogwtzcmpsi td, #ogwtzcmpsi th {
   border-style: none;
 }
 
-#rcyirhmnan p {
+#ogwtzcmpsi p {
   margin: 0;
   padding: 0;
 }
 
-#rcyirhmnan .gt_table {
+#ogwtzcmpsi .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -718,12 +718,12 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-left-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_caption {
+#ogwtzcmpsi .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rcyirhmnan .gt_title {
+#ogwtzcmpsi .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -735,7 +735,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-width: 0;
 }
 
-#rcyirhmnan .gt_subtitle {
+#ogwtzcmpsi .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -747,7 +747,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-top-width: 0;
 }
 
-#rcyirhmnan .gt_heading {
+#ogwtzcmpsi .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -759,13 +759,13 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_bottom_border {
+#ogwtzcmpsi .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_col_headings {
+#ogwtzcmpsi .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -780,7 +780,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_col_heading {
+#ogwtzcmpsi .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -800,7 +800,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   overflow-x: hidden;
 }
 
-#rcyirhmnan .gt_column_spanner_outer {
+#ogwtzcmpsi .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -812,15 +812,15 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 4px;
 }
 
-#rcyirhmnan .gt_column_spanner_outer:first-child {
+#ogwtzcmpsi .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rcyirhmnan .gt_column_spanner_outer:last-child {
+#ogwtzcmpsi .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rcyirhmnan .gt_column_spanner {
+#ogwtzcmpsi .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -832,11 +832,11 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   width: 100%;
 }
 
-#rcyirhmnan .gt_spanner_row {
+#ogwtzcmpsi .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rcyirhmnan .gt_group_heading {
+#ogwtzcmpsi .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -862,7 +862,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   text-align: left;
 }
 
-#rcyirhmnan .gt_empty_group_heading {
+#ogwtzcmpsi .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -877,15 +877,15 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   vertical-align: middle;
 }
 
-#rcyirhmnan .gt_from_md > :first-child {
+#ogwtzcmpsi .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rcyirhmnan .gt_from_md > :last-child {
+#ogwtzcmpsi .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rcyirhmnan .gt_row {
+#ogwtzcmpsi .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -904,7 +904,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   overflow-x: hidden;
 }
 
-#rcyirhmnan .gt_stub {
+#ogwtzcmpsi .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -917,7 +917,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#rcyirhmnan .gt_stub_row_group {
+#ogwtzcmpsi .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -931,15 +931,15 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   vertical-align: top;
 }
 
-#rcyirhmnan .gt_row_group_first td {
+#ogwtzcmpsi .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rcyirhmnan .gt_row_group_first th {
+#ogwtzcmpsi .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rcyirhmnan .gt_summary_row {
+#ogwtzcmpsi .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -949,16 +949,16 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#rcyirhmnan .gt_first_summary_row {
+#ogwtzcmpsi .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_first_summary_row.thick {
+#ogwtzcmpsi .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rcyirhmnan .gt_last_summary_row {
+#ogwtzcmpsi .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -968,7 +968,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_grand_summary_row {
+#ogwtzcmpsi .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -978,7 +978,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#rcyirhmnan .gt_first_grand_summary_row {
+#ogwtzcmpsi .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -988,7 +988,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-top-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_last_grand_summary_row_top {
+#ogwtzcmpsi .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -998,11 +998,11 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_striped {
+#ogwtzcmpsi .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rcyirhmnan .gt_table_body {
+#ogwtzcmpsi .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1011,7 +1011,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-bottom-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_footnotes {
+#ogwtzcmpsi .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1025,7 +1025,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_footnote {
+#ogwtzcmpsi .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1034,7 +1034,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#rcyirhmnan .gt_sourcenotes {
+#ogwtzcmpsi .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1048,7 +1048,7 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   border-right-color: #D3D3D3;
 }
 
-#rcyirhmnan .gt_sourcenote {
+#ogwtzcmpsi .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1056,72 +1056,72 @@ Colton Baumler <a href="https://orcid.org/0000-0002-5926-7792" class="quarto-tit
   padding-right: 5px;
 }
 
-#rcyirhmnan .gt_left {
+#ogwtzcmpsi .gt_left {
   text-align: left;
 }
 
-#rcyirhmnan .gt_center {
+#ogwtzcmpsi .gt_center {
   text-align: center;
 }
 
-#rcyirhmnan .gt_right {
+#ogwtzcmpsi .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rcyirhmnan .gt_font_normal {
+#ogwtzcmpsi .gt_font_normal {
   font-weight: normal;
 }
 
-#rcyirhmnan .gt_font_bold {
+#ogwtzcmpsi .gt_font_bold {
   font-weight: bold;
 }
 
-#rcyirhmnan .gt_font_italic {
+#ogwtzcmpsi .gt_font_italic {
   font-style: italic;
 }
 
-#rcyirhmnan .gt_super {
+#ogwtzcmpsi .gt_super {
   font-size: 65%;
 }
 
-#rcyirhmnan .gt_footnote_marks {
+#ogwtzcmpsi .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rcyirhmnan .gt_asterisk {
+#ogwtzcmpsi .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rcyirhmnan .gt_indent_1 {
+#ogwtzcmpsi .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rcyirhmnan .gt_indent_2 {
+#ogwtzcmpsi .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rcyirhmnan .gt_indent_3 {
+#ogwtzcmpsi .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rcyirhmnan .gt_indent_4 {
+#ogwtzcmpsi .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rcyirhmnan .gt_indent_5 {
+#ogwtzcmpsi .gt_indent_5 {
   text-indent: 25px;
 }
 
-#rcyirhmnan .katex-display {
+#ogwtzcmpsi .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#rcyirhmnan div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ogwtzcmpsi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>

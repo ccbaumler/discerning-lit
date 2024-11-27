@@ -259,13 +259,8 @@ readability_df %>%
 
 [![](images/ari_plot.png){.absolute bottom=0 right=250 height="500px"}]{.fragment}
 
-[![](images/coleman_liau_plot.png{.absolute bottom=0 right=250 height="500px"}]{.fragment}
+[![](images/coleman_liau_plot.png){.absolute bottom=0 right=250 height="500px"}]{.fragment}
 :::
-
-
-# Discuss readability in scientific communication
-
-![High Five for Readability metrics!](images/highfive-readability.jpeg)
 
 ## What are applications of readability?
 
@@ -355,6 +350,10 @@ document.getElementById("userInput2").addEventListener("input", updateOutputText
 ::::
 
 :::
+
+# Applying metrics to academic handouts?
+
+![High Five for Readability metrics!](images/highfive-readability.jpeg)
 
 ## Am I improving the documentation?
 
